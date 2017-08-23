@@ -57,7 +57,7 @@ export MIRROR_UBUNTU_ROOT := $(shell echo -n '/' ; echo "$(MIRROR_UBUNTU_URL)" |
 
 export LATEST_MIRROR_ID_URL := http://$(shell ./select_closest_fuel_mirror.py)
 
-export MIRROR_MOS_UBUNTU := http://10.84.8.121
+export MIRROR_MOS_UBUNTU := 10.84.8.121
 #export LATEST_TARGET_UBUNTU := $(shell curl -sSf "$(MIRROR_MOS_UBUNTU)/mos-repos/ubuntu/$(MOSVERSION).target.txt" | head -1)
 # Fuel 9.0
 export LATEST_TARGET_UBUNTU := x86_64
@@ -131,7 +131,7 @@ $(ISOCACHE):
 	sudo service docker stop || exit 0
 	sudo service docker start
 
-	cd $(FUEL_MAIN_DIR) && chmod 777 prepare-build-env.sh && ./prepare-build-env.sh
+	cd $(FUEL_MAIN_DIR) && ./prepare-build-env.sh
 	# Verify that Docker is alive
 	sudo docker info
 	# fuel-main Makefiles do not like `make -C`
