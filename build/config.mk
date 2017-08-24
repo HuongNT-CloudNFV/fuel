@@ -9,7 +9,7 @@
 ##############################################################################
 
 FUEL_MAIN_REPO := https://github.com/HuongNT-CloudNFV/fuel-main.git
-FUEL_MAIN_TAG := 2a720565dfbf72c54851c50c9e0b6686be1341bd
+FUEL_MAIN_TAG := 0cf7824e7c9bff13731e8091fb399df1e16216f5
 MOS_VERSION = 9.0
 OPENSTACK_VERSION = mitaka-9.0
 
