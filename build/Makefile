@@ -55,7 +55,7 @@ export MIRROR_UBUNTU_URL := $(shell ./f_isoroot/f_repobuild/select_ubuntu_repo.s
 export MIRROR_UBUNTU := $(shell echo "$(MIRROR_UBUNTU_URL)" | cut -d'/' -f3 )
 export MIRROR_UBUNTU_ROOT := $(shell echo -n '/' ; echo "$(MIRROR_UBUNTU_URL)" | cut -d'/' -f4-)
 
-export LATEST_MIRROR_ID_URL := http://$(shell ./select_closest_fuel_mirror.py)
+export LATEST_MIRROR_ID_URL := http://10.84.8.166
 
 export MIRROR_MOS_UBUNTU := 10.84.8.121
 #export LATEST_TARGET_UBUNTU := $(shell curl -sSf "$(MIRROR_MOS_UBUNTU)/mos-repos/ubuntu/$(MOSVERSION).target.txt" | head -1)
@@ -63,8 +63,8 @@ export MIRROR_MOS_UBUNTU := 10.84.8.121
 export LATEST_TARGET_UBUNTU := x86_64
 export MIRROR_MOS_UBUNTU_ROOT := /mitaka-9.0/ubuntu/$(LATEST_TARGET_UBUNTU)
 
-export LATEST_TARGET_CENTOS := $(shell curl -sSf "$(LATEST_MIRROR_ID_URL)/mos-repos/centos/mos$(MOSVERSION)-centos7/os.target.txt" | head -1)
-export MIRROR_FUEL := "$(LATEST_MIRROR_ID_URL)/mos-repos/centos/mos$(MOSVERSION)-centos7/$(LATEST_TARGET_CENTOS)/x86_64"
+export LATEST_TARGET_CENTOS := mitaka-9.0
+export MIRROR_FUEL := "$(LATEST_MIRROR_ID_URL)/$(LATEST_TARGET_CENTOS)/centos/x86_64"
 
 # uncomment and use: make print-VARIABLE
 #print-%  : ; @echo $* = $($*)
