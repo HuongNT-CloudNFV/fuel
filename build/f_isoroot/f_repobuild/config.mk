@@ -7,7 +7,7 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-FUEL_MIRROR_REPO?=https://github.com/openstack/fuel-mirror
+FUEL_MIRROR_REPO?=https://github.com/HuongNT-CloudNFV/fuel-mirror.git
 # Point to the commit where 302 redirects are handled
 # https://bugs.launchpad.net/fuel/mitaka/+bug/1593674
-FUEL_MIRROR_COMMIT=stable/mitaka
+FUEL_MIRROR_COMMIT=mitaka
